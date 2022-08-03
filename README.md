@@ -19,24 +19,40 @@ Once the data analytics team was provided a task list, the team developed Python
 1. **Import "csv" and "os" dependencies**: This allows us to view the file [election_results.csv](https://github.com/Sborresch/election_analysis/blob/main/Resources/election_results.csv) that is the final vote count report and join our files using the teams Microsoft operating system **(see appendix A)**.
 2. **Initialize variables**: incuding our total_votes counter, lists (candidate_options and county_options), dictionaries (candidate_votes and county_votes), and our winning candidate/county variables **(see appendix B)**.
 3. **Set for candidate loop**: To add candidate_names to candidate_options and track candidate votes **(see appendix C)**.
-4. **Repeat step 3 for county loop**: **(see appendix D)**.
+4. **Repeat step 3 for county loop**: To add county_names to county_options and track county votes **(see appendix D)**.
 5. **Set for loop to calculate winning county**: Calculates the total count and percentage for each county **(see appendix E)**.
 6. **Repeat step 5 for winning candidate**: Calculates the total count and percentage for each candidate **(see appendix F)**.
-
+7. **Print all necessary data to text file**: View text file at: [election_analysis.txt](https://github.com/Sborresch/election_analysis/blob/main/analysis/election_analysis.txt)
 
 ### Results
-Below is an image the results of the Colorado congressional election
-- How many votes were cast in this congressional election?
-  - There was a total of 369,711 totoal votes for this congressional election
-- Provide a breakdown of the number of votes and percentage of total votes for each county in the precinct.
-- Which county had the largest number of votes?
-- Provide a breakdown of the number of votes and the percentage of total votes each candidate received.
-- Which candidate won the election, what was their vote count, and what was their pecentage of total votes?
+Below is a screenshot of the [election_analysis.txt](https://github.com/Sborresch/election_analysis/blob/main/analysis/election_analysis.txt) file for the Colorado congressional election and a breakdown of the findings:
+
+![Screenshot](https://github.com/Sborresch/election_analysis/blob/main/Election%20Results.png)
+
+- **How many votes were cast in this congressional election?**
+  - There was a total of 369,711 total votes for this congressional election.
+- **Provide a breakdown of the number of votes and percentage of total votes for each county in the precinct.**
+  - In Jefferson county 38,855 individuals chose to vote in this congressional election and accounted for 10.5% of the 369,711 total votes.
+  - In Denver county 306,055 individuals chose to vote in this congressional election and accounted for 73.8% of the 369,711 total votes.
+  - In Arapahoe county 24,801 individuals chose to vote in this congressional election and accounted for 6.7% of the 369,711 total votes.
+- **Which county had the largest number of votes?**
+  - The county with the largest number of votes was Denver, which accounted for 73.8% of all total votes for this congressional election.
+- **Provide a breakdown of the number of votes and the percentage of total votes each candidate received.**
+  - Charles Casper Stockham received 85,213 total votes which accounted for 23.0% of all 369,711 total votes.
+  - Diana DeGette received 272,892 total votes which accountded for 73.8% of all 369,711 total votes.
+  - Raymon Anthony Doane received 11,606 total votes which accounted for 3.1% of all 369,711 total votes.
+- **Which candidate won the election, what was their vote count, and what was their pecentage of total votes?**
+  - The winning candidate for the Colorado congressional election was **Diana DeGette**, as she obtained a majority of total votes.
 
 ## Election-Audit Summary
 ### Business Proposal
-### Example One
-### Example Two
+  The data analytics team wanted to provide the Colorado Board of Elections team and the Election Commission members with a business proposal for how to use this Python script in future elections. In its current state, this Python script is written for this specific election, reviewing candidates and counties. It is likely that in future elections the board and commision members may want to view the election results in different formats. For example, viewing the data by city instead of county and identifying the county with the lowest turnout. For this reason, the data anlytics team provided two additional snipets of Python script that can be used in lieu of the current script or on its own for future election audits:
+
+### Example One - City Votes
+  The purpose of this Python script is to allow those who audit the election data to view 
+
+### Example Two - Lowest County Turnout
+  The purpose of this Python script is to allow those who audit the election data to view which county had the lowest amount of turnout. These findings can help the state
 
 ## Appendix A
 ![Screenshot](https://github.com/Sborresch/election_analysis/blob/main/Appendix%20A.png)
