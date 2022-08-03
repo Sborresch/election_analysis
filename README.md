@@ -14,7 +14,7 @@
 
 ## Election-Audit Results
 ### Python Script
-Once the data analytics team was provided a task list, the team developed Python script to automate the election audit. Below are the major psuedocoding steps the data analytics team had to perform to automate this process:
+Once the data analytics team was provided a task list, the team developed Python script to automate the election audit. You can find the full Python script at [PyPoll_Challenge.py](https://github.com/Sborresch/election_analysis/blob/main/PyPoll_Challenge.py). Below are the major psuedocoding steps the data analytics team had to perform to automate this process:
 
 1. **Import "csv" and "os" dependencies**: This allows us to view the file [election_results.csv](https://github.com/Sborresch/election_analysis/blob/main/Resources/election_results.csv) that is the final vote count report and join our files using the teams Microsoft operating system **(see appendix A)**.
 2. **Initialize variables**: incuding our total_votes counter, lists (candidate_options and county_options), dictionaries (candidate_votes and county_votes), and our winning candidate/county variables **(see appendix B)**.
@@ -48,11 +48,37 @@ Below is a screenshot of the [election_analysis.txt](https://github.com/Sborresc
 ### Business Proposal
   The data analytics team wanted to provide the Colorado Board of Elections team and the Election Commission members with a business proposal for how to use this Python script in future elections. In its current state, this Python script is written for this specific election, reviewing candidates and counties. It is likely that in future elections the board and commision members may want to view the election results in different formats. For example, viewing the data by city instead of county and identifying the county with the lowest turnout. For this reason, the data anlytics team provided two additional snipets of Python script that can be used in lieu of the current script or on its own for future election audits:
 
-### Example One - City Votes
-  The purpose of this Python script is to allow those who audit the election data to view 
+### Example One - Adding a Floating-Decimal Value to the candidate_name Dictionary:
+  The purpose of this Python script is to allow those who audit the election data to identify the floating-decimal format of total votes each candidate received from the total votes of 369,711. This will allow the team to use an additional format of the calculated election data.
+  
+  **Modified Python Script Steps**:
+  1. **Establish a new variable called vote_floating_decimal under the canddiate vote count for loop**:
+      - vote_floating_decimal = float(votes)/float(total_votes)
+  2. **Calculate candidate_results dictionary**:
+      - candidate_results = (
+        - f"{candidate_name}: {vote_percentage:.1f}% ({votes:,}) (vote_floating_decimal:.})\n"
+        - )
 
 ### Example Two - Lowest County Turnout
-  The purpose of this Python script is to allow those who audit the election data to view which county had the lowest amount of turnout. These findings can help the state
+  The purpose of this Python script is to allow those who audit the election data to view which county had the lowest amount of turnout. These findings can help the state deploy marketing tactics to encourage these individuals to show up for elections. This will allow the voice of smaller or low turnout counties have a voice in the election and its respective results.
+  
+**Modified Python Script Steps**:
+
+1. **Establish a loosing_county variable**:
+    - loosing_county = ""
+    - loosing_county_count = 0
+    - loosing_county_percentage = 0
+2. **Write an if statement for the loosing county**:
+    - if (votes2 < loosing_county_count) and (votes2_percentage < loosing_county_percentage):
+      - loosing_county = county_name
+      - loosing_county_count = votes2
+      - loosing_county_percentage = votes2_percentage
+3. **Print the county with the smallest turnout to the terminal**:
+    - loosing_smallest_county_turnout_summary = (
+      - f"\n---------------------]n"
+      - f"Smallest County Turnout: {loosing_county}\n"
+      - f"----------------------\n"
+      - )
 
 ## Appendix A
 ![Screenshot](https://github.com/Sborresch/election_analysis/blob/main/Appendix%20A.png)
